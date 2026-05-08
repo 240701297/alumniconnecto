@@ -98,6 +98,83 @@ export type Database = {
         }
         Relationships: []
       }
+      job_applications: {
+        Row: {
+          created_at: string
+          id: string
+          job_id: string
+          message: string | null
+          status: string
+          student_id: string
+        }
+        Insert: {
+          created_at?: string
+          id?: string
+          job_id: string
+          message?: string | null
+          status?: string
+          student_id: string
+        }
+        Update: {
+          created_at?: string
+          id?: string
+          job_id?: string
+          message?: string | null
+          status?: string
+          student_id?: string
+        }
+        Relationships: [
+          {
+            foreignKeyName: "job_applications_job_id_fkey"
+            columns: ["job_id"]
+            isOneToOne: false
+            referencedRelation: "jobs"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
+      jobs: {
+        Row: {
+          apply_link: string | null
+          company: string
+          created_at: string
+          description: string
+          id: string
+          is_active: boolean
+          job_type: string
+          location: string | null
+          posted_by: string
+          title: string
+          updated_at: string
+        }
+        Insert: {
+          apply_link?: string | null
+          company: string
+          created_at?: string
+          description?: string
+          id?: string
+          is_active?: boolean
+          job_type?: string
+          location?: string | null
+          posted_by: string
+          title: string
+          updated_at?: string
+        }
+        Update: {
+          apply_link?: string | null
+          company?: string
+          created_at?: string
+          description?: string
+          id?: string
+          is_active?: boolean
+          job_type?: string
+          location?: string | null
+          posted_by?: string
+          title?: string
+          updated_at?: string
+        }
+        Relationships: []
+      }
       messages: {
         Row: {
           content: string
