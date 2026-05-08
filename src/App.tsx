@@ -16,6 +16,7 @@ import SearchAlumni from "./pages/SearchAlumni";
 import Messages from "./pages/Messages";
 import Requests from "./pages/Requests";
 import Mentorship from "./pages/Mentorship";
+import Jobs from "./pages/Jobs";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
