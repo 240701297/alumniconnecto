@@ -16,6 +16,7 @@ import SearchAlumni from "./pages/SearchAlumni";
 import Messages from "./pages/Messages";
 import Requests from "./pages/Requests";
 import Mentorship from "./pages/Mentorship";
+import Jobs from "./pages/Jobs";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -39,6 +40,7 @@ const App = () => (
             <Route path="/messages" element={<ProtectedRoute><Messages /></ProtectedRoute>} />
             <Route path="/requests" element={<ProtectedRoute allow={["alumni", "admin"]}><Requests /></ProtectedRoute>} />
             <Route path="/mentorship" element={<ProtectedRoute><Mentorship /></ProtectedRoute>} />
+            <Route path="/jobs" element={<ProtectedRoute><Jobs /></ProtectedRoute>} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </AuthProvider>

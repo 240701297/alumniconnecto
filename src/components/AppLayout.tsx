@@ -2,7 +2,7 @@ import { ReactNode } from "react";
 import { NavLink, useNavigate } from "react-router-dom";
 import {
   LayoutDashboard, Users, Calendar, Megaphone, MessageSquare,
-  Search, GraduationCap, LogOut, UserCircle, Inbox, BookOpen
+  Search, GraduationCap, LogOut, UserCircle, Inbox, BookOpen, Briefcase
 } from "lucide-react";
 import { useAuth } from "@/lib/auth";
 import { Button } from "@/components/ui/button";
@@ -14,6 +14,7 @@ const navByRole = {
     { to: "/alumni", icon: Users, label: "Manage Alumni" },
     { to: "/events", icon: Calendar, label: "Events" },
     { to: "/announcements", icon: Megaphone, label: "Announcements" },
+    { to: "/jobs", icon: Briefcase, label: "Jobs Board" },
   ],
   alumni: [
     { to: "/dashboard", icon: LayoutDashboard, label: "Dashboard" },
@@ -21,13 +22,15 @@ const navByRole = {
     { to: "/events", icon: Calendar, label: "Events" },
     { to: "/messages", icon: MessageSquare, label: "Messages" },
     { to: "/requests", icon: Inbox, label: "Mentorship Requests" },
+    { to: "/jobs", icon: Briefcase, label: "Post Jobs" },
   ],
   student: [
     { to: "/dashboard", icon: LayoutDashboard, label: "Dashboard" },
-    { to: "/search", icon: Search, label: "Find Alumni" },
+    { to: "/search", icon: Search, label: "Smart Connect" },
+    { to: "/jobs", icon: Briefcase, label: "Jobs Board" },
     { to: "/events", icon: Calendar, label: "Events" },
     { to: "/messages", icon: MessageSquare, label: "Messages" },
-    { to: "/mentorship", icon: BookOpen, label: "Mentorship & Jobs" },
+    { to: "/mentorship", icon: BookOpen, label: "AI Career Hub" },
   ],
 };
 

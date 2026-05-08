@@ -1,1 +1,10 @@
 project_id = "wozuqghojfxgroegaepl"
+
+[functions.career-chat]
+verify_jwt = false
+
+[functions.match-alumni]
+verify_jwt = false
+
+[functions.claim-admin]
+verify_jwt = false
